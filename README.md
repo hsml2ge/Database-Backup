@@ -2,7 +2,7 @@
 Database backup is the process of backing up the operational state, architecture and stored data of database software. It enables the creation of a duplicate instance or copy of a database in case the primary database crashes, is corrupted or is lost. Many developers have complaint about ways to take full backup of their database. I believe this solution should solve their problem.
 
 ### WINDOWS MSSQL SERVER
-  To auto generate backup for mssql server, the following steps should be followed.
+  To auto generate backup for mssql server, the following steps should be followed:
   * Install 7z on your computer
   * Click MSSQL-SERVER folder and MSSQL_SERVER.bat
   * Copy the content of MSSQL_SERVER.bat
@@ -10,3 +10,14 @@ Database backup is the process of backing up the operational state, architecture
   * Edit the content to match your mssql server and database details
   * Double click the file to execute it. if the database backup is successful then use your windows scheduler to schedule your times of execution. Otherwise scan through the file and make sure all your parameters are accurate.
 ### MYSQL-SERVER
+  To auto generate backup for mysql server, the following steps should be followed:
+  * Download this project and delete the MSSQL-SERVER part as you don't need it
+  * Copy the MYSQL-SERVER to your local/remote web host
+  * Open the backup.php file and edit to your timezone, and change the parameters of the variable to match your db credentials
+  ```php
+    $database = 'db_name';
+    $user = 'username';
+    $pass = 'password';
+    $host = 'db_host';
+  ```
+   and save
